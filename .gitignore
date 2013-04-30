@@ -1,6 +1,35 @@
-*.class
+/**
+ * @author octopus
+ * E-mail：zhangyu_neusoft@sina.com
+ * @version 
+ * Created on 2013-4-29 下午12:27:38
+ * All  Right	Reserved
+ * 
+ */
 
-# Package Files #
-*.jar
-*.war
-*.ear
+import java.util.Random;
+
+@SuppressWarnings("unused")
+public class ex_6_2_3 {
+	public static void main(String args[]){
+		int array[]=new int[100];
+		int i=0;
+		for(i=0;i<100;i++){
+			int n=(int)Math.abs(Math.random()*100);
+			array[i]=n;
+			System.out.print(array[i]+" ");
+			if(i%10==0)
+				System.out.println();
+		}
+		System.out.println();
+		int min=array[0];
+		int max=array[0];
+		for(i=0;i<100;i++){
+		if(min>array[i])
+			min=array[i];
+		if(max<array[i])
+			max=array[i];
+		}
+		System.out.println("这组随机数中最大的数是："+max+"\n"+"这组随机数中最小的数是:"+min);
+	}
+}
